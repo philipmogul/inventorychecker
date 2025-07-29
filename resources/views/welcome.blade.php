@@ -9,7 +9,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <h1 class="Welcome">WELCOME TO LARAVEL</h1>
+    <h1 class="success">WELCOME TO LARAVEL</h1>
     <hr />
     <p class="description">This is a simple Laravel application about checking inventory of a store.</p>
     <p><a href="/storeitems"> [ View my store items ] </a></p>

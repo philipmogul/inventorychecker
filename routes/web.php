@@ -6,6 +6,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Create a store item
+Route::get('/storeitems/create',function()
+{
+    return view('storeitems.create');
+});
+
+
 Route::get('/storeitems',function()
 {
     $storeitems = [
@@ -19,13 +26,6 @@ Route::get('/storeitems',function()
     ];
     return view('storeitems.items', ["storeitems" => $storeitems], ["coder" => "Philip"]);
 });
-
-// Create a store item
-Route::get('/storeitems/create',function($id)
-{
-    return view('storeitems.create');
-});
-
 
 // Items clicked by id
 

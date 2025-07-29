@@ -20,11 +20,9 @@ reuse the same layout structure across different pages.
     ?>
     
     @if( $coder == "Philip" )
-    <h3>Welcome, {{ $coder }}!</h3>
-    <p>Here are your store items:</p>
+    <h3 class="text-success">Welcome Home, {{ $coder }}!</h3>
     @endif 
 
-    <h3>Available Items</h3>
     <ul>
         @foreach ($storeitems as $item)
          <li>

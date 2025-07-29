@@ -1,0 +1,10 @@
+Migrations are for defining structure to which data will be saved in a database. 
+
+Made by the following command:
+
+php artisan make:migration create_todos_table 
+
+Step 2: Go to the created migration and add columns you want for your table 
+
+Step 3: Run the migration: 
+php artisan migrate 

@@ -10,12 +10,12 @@
 </head>
 <body>
    <header>
-    <nav class="navbar navbar-expand bg-dark navbar-dark">
+    <nav class="navbar navbar-expand bg-success navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">MyShop</a>
+            <a class="navbar-brand" href="#">STORE ITEMS</a>
             <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/welcome">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/storeitems">All Items</a>
