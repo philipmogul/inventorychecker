@@ -18,7 +18,9 @@ Accessing the highlight prop passed by the items page
 
 {{-- If highlight is true, add a special class for styling --}}
 
-<div @class(['hightlight'=> $highlight]) style="border: 2px solid black; padding: 10px; margin: 10px;width: 200px;">
+<div class="card mt-5 shadow rounded border-2 border-success" style="width: 300px;" @class(['hightlight'=> $highlight])>
+   <div class="card-body">
     {{ $slot }}
-    <a {{ $attributes }} class="btn"> [ View Details ] </a>
+    <a {{ $attributes }} class="btn btn-success"> [ View Details ] </a>
+   </div>
 </div>
