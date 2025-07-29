@@ -1,0 +1,22 @@
+Laravel Eloquent Model (ORM) ( Object Relational Mapping )
+
+With the migrations created(table structures), ORMs' provide a way of interacting with the 
+databases via the MVC framework 
+
+Eloquent is Laravel's ORM 
+
+Steps:
+1. php artisan make:model Store -mfs 
+// mfs means migrations, factories and seeders 
+
+Next Steps after: 
+1. Go to migrations file and create table structure 
+2. Then, php artisan migrate // To create the table 
+
+3. Go to Models Folder // Provides the ORM to the Store Model 
+4. Create protected field $fillable (an array for mass assignment to columns in table)
+// because model by default prevents mass assignment of values 
+5. (Optional) Open tinker and use the model to make insertions to the table 
+// php artisan tinker 
+// use App\Models\Store
+// Store::create(['name'=>'Philip','description'=>'blah','price'=>10,'quantity'=>11])
