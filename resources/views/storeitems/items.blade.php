@@ -17,16 +17,22 @@
     */
     ?>
     
+    @if( $coder == "Philip" )
+    <h3>Welcome, {{ $coder }}!</h3>
+    <p>Here are your store items:</p>
+    @endif 
 
 
 
 
     <h3>Available Items</h3>
     <ul>
-        <li><a href="/storeitems/{{$storeitems[0]["id"]}}">{{ $storeitems[0]["name"] }}</a></li>
-        <li><a href="/storeitems/{{$storeitems[1]["id"]}}">{{ $storeitems[1]["name"] }}</a></li>
-        <li><a href="/storeitems/{{$storeitems[2]["id"]}}">{{ $storeitems[2]["name"] }}</a></li>
-        <li><a href="/storeitems/{{$storeitems[3]["id"]}}">{{ $storeitems[3]["name"] }}</a></li>
+        @foreach ($storeitems as $item)
+         <li>
+            <p>{{ $item['name'] }}</p>
+            <a href="/storeitems/{{ $item['id'] }}">[ View {{ $item['name'] }} ]</a>
+         </li>   
+        @endforeach
     </ul>
 
 

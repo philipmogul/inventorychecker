@@ -15,7 +15,7 @@ Route::get('/storeitems',function()
         ["id" => 4, "name" => "Eggs", "description" => "Description for Eggs", "price" => 40.00, "quantity" => 25],
 
     ];
-    return view('storeitems.items', ["storeitems" => $storeitems]);
+    return view('storeitems.items', ["storeitems" => $storeitems], ["coder" => "Philip"]);
 });
 
 // Items clicked by id
