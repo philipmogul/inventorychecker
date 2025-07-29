@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Store Items</title>
-</head>
-<body>
-   <h2>STORE ITEMS</h2>
-   <hr />
+<x-layout>
+<?php 
+/*
+Layouts are kinda like templates that can be reused across multiple views.
+You can define a layout in a separate file and then use it in your views.
+Check out the components/layout.blade.php file for the layout definition.
+It helps to keep your code DRY (Don't Repeat Yourself) by allowing you to
+reuse the same layout structure across different pages.
+*/
+?>
+
+
 
      <?php 
     /*
@@ -22,9 +24,6 @@
     <p>Here are your store items:</p>
     @endif 
 
-
-
-
     <h3>Available Items</h3>
     <ul>
         @foreach ($storeitems as $item)
@@ -34,8 +33,4 @@
          </li>   
         @endforeach
     </ul>
-
-
-
-</body>
-</html>
+</x-layout>
