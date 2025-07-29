@@ -28,8 +28,11 @@ reuse the same layout structure across different pages.
     <ul>
         @foreach ($storeitems as $item)
          <li>
-            <p>{{ $item['name'] }}</p>
-            <a href="/storeitems/{{ $item['id'] }}">[ View {{ $item['name'] }} ]</a>
+             <x-card href="/storeitems/{{ $item['id'] }}">
+                 <h4>{{ $item['name'] }}</h4>
+                 <p>Price: ${{ $item['price'] }}</p>
+                 <p>Quantity: {{ $item['quantity'] }}</p>
+             </x-card>
          </li>   
         @endforeach
     </ul>
