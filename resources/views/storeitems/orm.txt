@@ -30,3 +30,18 @@ Next Steps after:
 // use App\Models\Store
 // Store::factory()->count(50)->create()
 
+7. Seeders : // Useful for populating tables with dummy data 
+// Seeders Folder/StoreSeeder 
+// in the php doc, include: use App\Models\Store; at the top 
+//  Store::factory()->count(50)->create(); at the bottom 
+// Open DatabaseSeeder, in the run function, include Store seeder 
+ $this->call([
+            // Add other seeders here
+            StoreSeeder::class,
+        ]);
+
+// When we want to delete everything in the db and start a fresh, 
+// The seeder will populate the tables with dummy data 
+php artisan migrate:fresh --seed (Tells dbseeder class to fire StoreSeeder which uses 
+store factory to populate the table with dummy data)
+
