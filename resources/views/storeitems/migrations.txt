@@ -8,3 +8,9 @@ Step 2: Go to the created migration and add columns you want for your table
 
 Step 3: Run the migration: 
 php artisan migrate 
+
+
+TO UNDO THE MIGRATION, 
+1. Run : php artisan migrate:rollback 
+
+And it will deleted the previously made table and update the migrations columns
