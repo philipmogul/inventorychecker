@@ -20,3 +20,13 @@ Next Steps after:
 // php artisan tinker 
 // use App\Models\Store
 // Store::create(['name'=>'Philip','description'=>'blah','price'=>10,'quantity'=>11])
+
+6. Dynamically Entering Mass Data into the sqlite db for dev environment testing 
+// Use factories and fake method to create sqlite entries 
+// In factories/Storefactory.php 
+// in the return[ database columns and values / attach fake() to populate dynamically ]
+
+// to run it, open tinker : php artisan tinker
+// use App\Models\Store
+// Store::factory()->count(50)->create()
+
