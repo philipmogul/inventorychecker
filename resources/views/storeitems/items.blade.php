@@ -18,18 +18,15 @@ reuse the same layout structure across different pages.
         To use it, start with @ and end with @
     */
     ?>
-    
-    @if( $coder == "Philip" )
-    <h3 class="text-success">Welcome Home, {{ $coder }}!</h3>
-    @endif 
+   
 
     <ul>
         @foreach ($storeitems as $item)
          <li>
-             <x-card href="/storeitems/{{ $item['id'] }}" :highlight="$item['price'] > 25">
-                 <h4>{{ $item['name'] }}</h4>
-                 <p>Price: ${{ $item['price'] }}</p>
-                 <p>Quantity: {{ $item['quantity'] }}</p>
+             <x-card href="/storeitems/{{ $item->id }}" :highlight="$item['price'] > 25">
+                 <h4>{{ $item->name }}</h4>
+                 <p>Price: ${{ $item->price }}</p>
+                 <p>Quantity: {{ $item->Quantity }}</p>
              </x-card>
          </li>   
         @endforeach

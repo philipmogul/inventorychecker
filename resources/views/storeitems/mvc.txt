@@ -1,0 +1,18 @@
+1. Make controller
+// php artisan make:controller StoreController (Controls what is output to view)
+// It will be in app/Http/Controllers
+
+
+2. Paste in functions for controlling different operations to views 
+3. Paste code from web.php to the appropriate Controller Methods because Controllers will control 
+what is in the view 
+4. Use the StoreModel to get values from db so they be posted in the Controller 
+// $storeitems = Store::orderBy('created_at','desc')->get(); 
+
+5. Hook routes in web.php 
+// include StoreController Link 
+// use App\Http\Controllers\StoreController;
+
+6. Update the Routes 
+// Route::get('/storeitems', [StoreController::class, 'index']);
+// The index is the name of the method responsible for views to the user 
