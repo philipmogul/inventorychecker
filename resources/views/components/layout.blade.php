@@ -18,10 +18,11 @@
                     <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/storeitems">All Items</a>
+                    <?/* REPLACED DEFAULT ROUTES WITH NAMED ROUTES */?>
+                    <a class="nav-link" href="{{ route('storeitems.index') }}">All Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/storeitems/create">Add item</a>
+                    <a class="nav-link" href="{{ route('storeitems.create') }}">Add item</a>
                 </li>
             </ul>
         </div>

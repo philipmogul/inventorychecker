@@ -23,10 +23,11 @@ reuse the same layout structure across different pages.
     <ul>
         @foreach ($storeitems as $item)
          <li>
-             <x-card href="/storeitems/{{ $item->id }}" :highlight="$item['price'] > 25">
+            <? /*REPLACED DEFAULT ROUTES WITH NAMED ROUTES */ ?>
+             <x-card href="{{ route('storeitems.show', $item->id) }}" :highlight="$item['price'] > 25">
                  <h4>{{ $item->name }}</h4>
                  <p>Price: ${{ $item->price }}</p>
-                 <p>Quantity: {{ $item->Quantity }}</p>
+                 <p>Quantity: {{ $item->quantity }}</p>
              </x-card>
          </li>   
         @endforeach

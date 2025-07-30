@@ -7,10 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/storeitems', [StoreController::class, 'index']);
-
+Route::get('/storeitems', [StoreController::class, 'index'])->name('storeitems.index');
 // Create a store item
-Route::get('/storeitems/create', [StoreController::class, 'create']);
-
+Route::get('/storeitems/create', [StoreController::class, 'create'])->name('storeitems.create');
 // Items clicked by id
-Route::get('/storeitems/{id}', [StoreController::class, 'show']);
+Route::get('/storeitems/{id}', [StoreController::class, 'show'])->name('storeitems.show');
