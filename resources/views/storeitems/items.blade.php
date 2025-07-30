@@ -32,4 +32,14 @@ reuse the same layout structure across different pages.
          </li>   
         @endforeach
     </ul>
+
+    <br /><br />
+    
+    <div class="pagination">
+        {{ $storeitems->links() }} <!-- This will render pagination links -->
+    </div>
+
+    <br /><br />
+
+
 </x-layout>

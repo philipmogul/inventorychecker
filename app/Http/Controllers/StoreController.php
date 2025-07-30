@@ -10,7 +10,11 @@ class StoreController extends Controller
     public function index()
     {
         //fetch all records and pass to index view 
-        $storeitems = Store::orderBy('created_at','desc')->get(); 
+        // $storeitems = Store::orderBy('created_at','desc')->get(); 
+
+        // LOAD WITH PAGINATION
+         $storeitems = Store::orderBy('created_at','desc')->paginate(10); 
+
         // Assuming you have a Store model that interacts with the database
 
         return view('storeitems.items', ["storeitems" => $storeitems]);
