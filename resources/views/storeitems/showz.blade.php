@@ -3,7 +3,7 @@
 
     <style> .custom-card {
       border: 2px solid #28a745; /* Green border */
-      width: 600px; height: 350px; margin: 20px auto; /* Centered with margin */
+      width: 600px; min-height: 350px; margin: 20px auto; /* Centered with margin */
       padding: 20px; /* Padding inside the card */
     }
   </style>

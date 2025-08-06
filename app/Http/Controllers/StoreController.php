@@ -40,5 +40,20 @@ class StoreController extends Controller
 
     }
 
+    public function edit($id)
+    {
+        //fetch a single record by id and pass to edit view
+        $storeitem = Store::findOrFail($id);
+        return view('storeitems.edit', ["storeitem" => $storeitem]);
+    }
+
+    public function destroy($id)
+    {
+        //delete a store item by id
+        $storeitem = Store::findOrFail($id);
+        $storeitem->delete();
+
+        return redirect()->route('store.index')->with('success', 'Store item deleted successfully.');
+    }
 
 }
