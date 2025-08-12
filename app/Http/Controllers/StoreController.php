@@ -40,8 +40,8 @@ class StoreController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-            'quantity' => 'required|integer|min:0',
+            'price' => 'required|numeric|min:0|max:1000',
+            'quantity' => 'required|integer|min:0|max:100',
             'store_categories_id' => 'required|numeric|min:0',
         ]);
 
