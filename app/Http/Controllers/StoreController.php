@@ -37,6 +37,19 @@ class StoreController extends Controller
     public function store(Request $request)
     {
         //handle the form submission to create a new store item
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:0',
+            'store_categories_id' => 'required|numeric|min:0',
+        ]);
+
+        // Create a new store item
+        Store::create($validated);
+
+        // Redirect to the index page with a success message
+        return redirect()->route('storeitems.index')->with('success', 'Store item created successfully.');
 
     }
 

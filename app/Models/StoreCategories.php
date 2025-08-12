@@ -15,4 +15,13 @@ class StoreCategories extends Model
 
     /** @use HasFactory<\Database\Factories\StoreCategoriesFactory> */
     use HasFactory;
+
+    // Telling the model that it belongs to the StoreCategories model 
+    // Or Some models are connected. Below is how you do it. 
+    public function stores()
+    {
+        return $this->hasMany(Store::class);
+    }
+
+    
 }

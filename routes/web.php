@@ -12,3 +12,6 @@ Route::get('/storeitems', [StoreController::class, 'index'])->name('storeitems.i
 Route::get('/storeitems/create', [StoreController::class, 'create'])->name('storeitems.create');
 // Items clicked by id
 Route::get('/storeitems/{id}', [StoreController::class, 'show'])->name('storeitems.show');
+
+// Store item created
+Route::post('/storeitems', [StoreController::class, 'store'])->name('storeitems.store');
