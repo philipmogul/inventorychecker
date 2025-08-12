@@ -28,12 +28,12 @@ reuse the same layout structure across different pages.
                  <h4>{{ $item->name }}</h4>
                  <p>Price: ${{ $item->price }}</p>
                  <p>Quantity: {{ $item->quantity }}</p>
-
                 <?php 
                     // How to access database items from models 
                     // use the syntax: $item->method_name->property_name
                     // In this case, we are accessing the storeCategory method from the Store model
                 ?>
+
              </x-card>
          </li>   
         @endforeach

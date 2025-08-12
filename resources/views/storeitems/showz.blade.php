@@ -14,6 +14,14 @@
          <p class='card-text'>Price: ${{ $storeitem->price }}</p>
          <p class='card-text'>Quantity: {{ $storeitem->quantity }}</p>
          <p class='card-text'>Description: {{ $storeitem->description }}</p>
+          <?php 
+                 // Deleting Store Items
+          ?>
+          <form id="delete-form" action="{{ route('storeitems.destroy', $storeitem->id) }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <input type="submit" class="btn btn-danger" value="Delete {{ $storeitem->name }}" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this item?')) { document.getElementById('delete-form').submit(); }">
+          </form>
         </div>
     </div>
 

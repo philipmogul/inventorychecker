@@ -15,3 +15,6 @@ Route::get('/storeitems/{id}', [StoreController::class, 'show'])->name('storeite
 
 // Store item created
 Route::post('/storeitems', [StoreController::class, 'store'])->name('storeitems.store');
+
+// Deleting Store items 
+Route::delete('/storeitems/{id}', [StoreController::class, 'destroy'])->name('storeitems.destroy');

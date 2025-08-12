@@ -66,7 +66,7 @@ class StoreController extends Controller
         $storeitem = Store::findOrFail($id);
         $storeitem->delete();
 
-        return redirect()->route('store.index')->with('success', 'Store item deleted successfully.');
+        return redirect()->route('storeitems.index')->with('success', 'Store item deleted successfully.');
     }
 
 }
